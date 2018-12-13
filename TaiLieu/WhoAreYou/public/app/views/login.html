@@ -1,0 +1,70 @@
+<div class="login-box">
+  <div class="login-logo">
+    <a href><b>Sim's Chat</b>.Rom<small>.</small></a>
+  </div><!-- /.login-logo -->
+  <div class="login-box-body">
+    <h4 class="login-box-msg">Beyond Just Messaging...</h4>
+    <form>
+    	<div class="form-group errGroup">
+    	</div>
+	    <div ng-class="{'form-group':true, 'has-feedback':true, 'has-error':isErrorReq}">	      	
+	        <input type="text" class="form-control" placeholder="nickname" ng-model="username" ng-change="isErrorReq=isErrorNick=false" focus-me="true"/>
+	        <span ng-hide="isErrorNick"class="glyphicon glyphicon-user form-control-feedback"></span>
+	        <span ng-hide="!isErrorNick" class="glyphicon glyphicon-remove form-control-feedback errText"></span>
+	    </div>
+	    <div class="form-group has-feedback">
+	      	<div class="col-sm-12">
+	      		<p class="login-box-msg">Choose your Avatar</p>
+	      	</div>
+	        
+	    </div>
+	 	<div class="form-group has-feedback">
+	 		<div class="avatar-thumb">
+	 			<img src="app/css/dist/img/Avatar10.jpg" ng-class="{'avatar-selected': userAvatar==='Avatar10.jpg', 'avatar':true}" id="Avatar10" ng-click="changeAvatar('Avatar10.jpg')"/>
+	 		</div>
+		    <div class="avatar-thumb">
+		      	<img src="app/css/dist/img/Avatar11.jpg" ng-class="{'avatar-selected': userAvatar==='Avatar11.jpg', 'avatar':true}" id="Avatar11" ng-click="changeAvatar('Avatar11.jpg')"/>
+	      	</div>
+	      	<div class="avatar-thumb">
+		      	<img src="app/css/dist/img/Avatar12.jpg" ng-class="{'avatar-selected': userAvatar==='Avatar12.jpg', 'avatar':true}" id="Avatar12" ng-click="changeAvatar('Avatar12.jpg')"/>
+	      	</div>
+	      	<div class="avatar-thumb">
+		      	<img src="app/css/dist/img/Avatar13.jpg" ng-class="{'avatar-selected': userAvatar==='Avatar13.jpg', 'avatar':true}" id="Avatar13" ng-click="changeAvatar('Avatar13.jpg')"/>
+	      	</div>
+	      	<div class="avatar-thumb">
+	    	  	<img src="app/css/dist/img/Avatar14.jpg" ng-class="{'avatar-selected': userAvatar==='Avatar14.jpg', 'avatar':true}" id="Avatar14" ng-click="changeAvatar('Avatar14.jpg')"/>
+	      	</div>
+	      	<div class="avatar-thumb">
+	      		<img src="app/css/dist/img/Avatar15.jpg" ng-class="{'avatar-selected': userAvatar==='Avatar15.jpg', 'avatar':true}" id="Avatar15" ng-click="changeAvatar('Avatar15.jpg')"/>
+	      	</div>
+	      	<div class="avatar-thumb">
+	      		<img src="app/css/dist/img/Avatar9.jpg" ng-class="{'avatar-selected': userAvatar==='Avatar9.jpg', 'avatar':true}" id="Avatar9" ng-click="changeAvatar('Avatar9.jpg')"/>
+	      	</div>
+	      	<div class="avatar-thumb">
+	      		<img src="app/css/dist/img/Avatar16.jpg" ng-class="{'avatar-selected': userAvatar==='Avatar16.jpg', 'avatar':true}" id="Avatar16" ng-click="changeAvatar('Avatar16.jpg')"/>
+	      	</div>
+	      	<div class="avatar-thumb">
+	      		<img src="app/css/dist/img/Avatar20.jpg" ng-class="{'avatar-selected': userAvatar==='Avatar20.jpg', 'avatar':true}" id="Avatar20" ng-click="changeAvatar('Avatar20.jpg')"/>
+	      	</div>
+	      	<div class="avatar-thumb">
+	      		<img src="app/css/dist/img/Avatar18.jpg" ng-class="{'avatar-selected': userAvatar==='Avatar18.jpg', 'avatar':true}" id="Avatar18" ng-click="changeAvatar('Avatar18.jpg')"/>
+	      	</div>
+	      	<div class="avatar-thumb">
+	      		<img src="app/css/dist/img/Avatar19.jpg" ng-class="{'avatar-selected': userAvatar==='Avatar19.jpg', 'avatar':true}" id="Avatar19" ng-click="changeAvatar('Avatar19.jpg')"/>
+	      	</div>
+	      	<div class="avatar-thumb">
+	      		<img src="app/css/dist/img/Avatar21.jpg" ng-class="{'avatar-selected': userAvatar==='Avatar21.jpg', 'avatar':true}" id="Avatar21" ng-click="changeAvatar('Avatar21.jpg')"/>
+	      	</div>
+	    <div class="chat-box"></div>
+	    </div><!-- /Avatar Div -->
+
+        <div class="row">
+	        <div class="col-xs-12">
+	          <button type="submit" class="btn btn-primary btn-block btn-flat" ng-click="redirect()">Start</button>
+	        </div><!-- /.col -->
+    	</div><!-- /.row -->
+      </div><!-- /.login-box-body -->
+    </form><!-- / form -->
+  </div><!-- /.login-box-body -->
+</div><!-- /.login-box -->
+

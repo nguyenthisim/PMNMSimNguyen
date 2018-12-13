@@ -1,0 +1,31 @@
+{
+  "name": "chatRoom",
+  "version": "0.0.1",
+  "description": "NodeJS based Text, Image, File Real Time Chat Room",
+  "keywords": [
+    "NodeJS",
+    "AngularJS",
+    "Web Sockets",
+    "File Sharing"
+  ],
+  "author": "",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "private": "false",
+  "bundleDependencies": [
+    "passport.socketio"
+  ],
+  "dependencies": {
+    "body-parser": "^1.13.2",
+    "express": "^4.16.4",
+    "formidable": "^1.0.17",
+    "fs": "0.0.2",
+    "multer": "^0.1.8",
+    "socket.io": "^2.1.1",
+    "util": "^0.10.3"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../icon/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <style>
+    /* Remove the navbar's default rounded borders and increase the bottom margin */ 
+    .navbar {
+      margin-bottom: 50px;
+      border-radius: 0;
+    }
+    
+    /* Remove the jumbotron's default bottom margin */ 
+     .jumbotron {
+      margin-bottom: 0;
+    }
+   
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="http://localhost:3000">Home</a></li>
+        <li><a href="http://localhost:3000/video/list">Videos</a></li>
+        <li><a href="http://localhost:3000/tintuc/listtintuc">News</a></li>
+        <li><a href="http://localhost:8282/#/v1/">Stores</a></li>
+         <li><a href="http://localhost:3001">Chat What !</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://localhost:3000/info"><span class="glyphicon glyphicon-user"></span> Sim Nguyễn</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="row">
+  	<div class="col-md-8 col-md-push-2">
+  		<table class="table table-hover">
+  			<thead>
+        <legend>Danh sách các video trong CSDL:</legend><br><br>
+  			    <tr class="bg-success text-center">
+  			    	<td colspan="6"><a href="add">Thêm video</a></td>
+  			    </tr>
+  				<tr class="bg-primary">
+  				<th>ID</th>
+  				<th>Tiêu đề</th>
+  				<th>Mô tả</th>
+  				<th>Key</th>
+  				<th>Ảnh</th>
+  				<th>Edit -  Delete</th>
+  				</tr>
+  			</thead>
+  			<tbody>
+  			    <% data.rows.forEach(function(item){ %>
+  			    <tr>
+  					<td><%= item.id%></td>
+  					<td><%= item.tieude%></td>
+  					<td><%= item.mota%></td>
+  					<td><%= item.key%></td>
+  					<td><img src="../upload/<%= item.image%>" alt="" width="100px"></td>
+  					<td><a href="edit/<%= item.id%>"><i class="fas fa-edit"></i><span>Edit</span></a> - <a onclick="return confirm('Are you sure want to delete?')" href="delete/<%= item.id%>"><i class="fas fa-trash-alt"></i><span>Delete</span></a></td>
+  				</tr>
+  			    <%})%>
+  			    
+  				
+  			</tbody>
+  		</table>
+  	</div>
+  </div>
+</div>
+<footer class="container-fluid text-center">
+  <p>Online Store Copyright</p>  
+  <form class="form-inline">Get deals:
+    <input type="email" class="form-control" size="50" placeholder="Email Address">
+    <button type="button" class="btn btn-danger">Sign Up</button>
+  </form>
+</footer>
+</body>
+</html>

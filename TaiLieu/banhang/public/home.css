@@ -1,0 +1,11 @@
+#txtUsername{
+  background-color: transparent;
+  border: solid 1px black;
+}
+#txtMessage{
+  background-color: transparent;
+  border: solid 1px black;
+}
+#listMessages{
+	height: 300px;
+}
